@@ -19,7 +19,7 @@
   "challenge_bytes": 7474,
   "source_sha256": {
     "BayesianPersuasion.lean": "5cd29e0c9cacc356186f9bf2a61665918a9684a6fdb2b541bb19bb6dea64e8b0",
-    "Solution.lean": "9607ef0481dcb0095af02d141705e1bdf63fbb443109e41653d380af911aaee1",
+    "Solution.lean": "371a9d2d625a5e2f0354d3f5ab2752b0efd921975bceaebb2a6f115e9ca4d218",
     "Challenge.lean": "4e293d7f7d83e04195bf5686021b2c6b28909cb0296fcb03480770222025ba1d",
     "BayesianPersuasion/CompactHull.lean": "506a87f48a85a495edd09df85a88b221025136862aaf54f0ed25b9f23d668f6a",
     "BayesianPersuasion/Signals.lean": "887dbe321d952e211ca24482f2679bdbb885562f6f703297a427700bdcfcdfd9",

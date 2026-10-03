@@ -143,4 +143,17 @@ Final inspected source snapshot:
 | `lake-manifest.json` | `e132b1e103b8555ad399f8c5d6c132a348478d9e28c7eaca4bb9bc10059f6cc2` |
 | `lean-toolchain` | `8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a` |
 
-Post-review exact-setup wording correction applied to README and source metadata: “each action is receiver-optimal at some belief.”
+
+## Final Solution import confirmation — 2026-10-03 UTC
+
+Read-only confirmation: `Solution.lean` now publicly imports the `BayesianPersuasion` root module, which publicly imports both `BayesianPersuasion.Theorems` and `BayesianPersuasion.Examples`. Thus the hosted Solution build includes the nonvacuous examples. The import change adds example declarations to the exported environment; it does not redefine or change the four selected research contracts or their 17 shared economic definitions. Comparator configuration is unchanged. The four research contracts still come from `Theorems.lean`.
+
+The primary setup wording correction is present in README and formalization metadata: each action is receiver-optimal at some belief. This resolves the earlier bibliographic wording comment. Parent reports another successful official Comparator and Lean/NanoDa/con-ron run plus module-origin audit of 121 authored constants; this reviewer did not rerun those checks. The source-scope/pinned-workflow pass stands; final hosted report and artifact inspection remain separate requirements.
+
+| Final confirmation file | SHA-256 |
+| --- | --- |
+| `Solution.lean` | `371a9d2d625a5e2f0354d3f5ab2752b0efd921975bceaebb2a6f115e9ca4d218` |
+| `BayesianPersuasion.lean` | `5cd29e0c9cacc356186f9bf2a61665918a9684a6fdb2b541bb19bb6dea64e8b0` |
+| `README.md` | `b6eeddb1c37b9aa8ca52f8842be61ec8d44888b164819a2dd16a0107b2ccee52` |
+| `formalization.yaml` | `219abad34b2999476ad95631d6faf7fecb8d9654995d160b78405b19f9153222` |
+| `comparator.json` | `8aacfb20da97fcef829f3f0dfd091cd758a571d1a5f51d0839fd8324f70e10bc` |

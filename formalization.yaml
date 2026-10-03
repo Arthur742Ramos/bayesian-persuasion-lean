@@ -1,0 +1,99 @@
+version: "v0.4"
+project:
+  name: "Optimal Information and Concavification in Bayesian Persuasion"
+  description: >-
+    Kamenica and Gentzkow's finite-state persuasion theorem from economic
+    primitives: nonempty compact metric actions, continuous sender and
+    receiver utilities, and a full-support common prior. Receiver best
+    replies and sender-preferred tie actions exist. The induced sender
+    payoff is bounded and upper semicontinuous. Finite signals realize
+    exactly finite Bayes-plausible posterior splittings, with prescribed
+    posteriors recovered only at nonnull messages. An optimal finite signal
+    with at most the number of states plus two messages exists and dominates
+    every finite experiment. Its value is the least concave majorant of the
+    induced payoff on the entire belief simplex; strict persuasion gain is
+    exactly the concavification gap. This covers the signal/splitting part
+    of Proposition 1 and Corollary 2, including attainment. The straightforward
+    recommendation branch and compact-state extension are outside this scope.
+    Related finite splitting and abstract attainment are already formalized
+    in Daniel Lyng's Econlib; no first-formalization or novelty claim is made.
+  authors:
+    - name: "Arthur Freitas Ramos"
+      github: "Arthur742Ramos"
+    - "David Barros Hulak"
+    - "Ruy Jose Guerra Barretto de Queiroz"
+  responsible_maintainers:
+    - "Arthur Freitas Ramos"
+    - "David Barros Hulak"
+    - "Ruy Jose Guerra Barretto de Queiroz"
+  license: "Apache-2.0"
+classification:
+  arxiv: ["econ.TH", "cs.GT"]
+  msc2020: ["91A26", "91B44", "52A20"]
+sources:
+  - title: "Bayesian Persuasion"
+    authors: ["Emir Kamenica", "Matthew Gentzkow"]
+    type: "paper"
+    year: 2011
+    url: "https://doi.org/10.1257/aer.101.6.2590"
+    relationship: "formalizes"
+    note: >-
+      American Economic Review 101(6), 2590-2615. Model pp.2593-2594,
+      Proposition 1 signal/splitting portion, existence discussion p.2596,
+      Corollary 2 p.2597 and Appendix A. At least two actions and every action being
+      receiver-optimal at some belief are unnecessary for these core results and
+      relaxed to nonempty actions. Actions are specialized to compact
+      metric spaces. Full-support prior is retained for signal realization.
+    author_endorsement: "not-contacted"
+  - title: "Econlib: Finite Persuasion and Primal Attainment"
+    authors: ["Daniel Lyng"]
+    type: "formalization"
+    year: 2026
+    url: "https://github.com/danlyng/Econlib/tree/003655ccf010cdf44c4f67d6675167b54ce0e9df"
+    relationship: "adapts"
+    note: >-
+      Revision 003655ccf010cdf44c4f67d6675167b54ce0e9df dated 2026-07-09,
+      inspected 2026-10-03 UTC. Finite Caratheodory proves n+1 signal
+      reduction and concavification. Duality PrimalAttainment proves
+      attainment for supplied bounded USC payoff on compact metric states.
+      CompactHull adapts finite reindexing and zero-padding arguments from
+      ConvexReduction and Finite Caratheodory under Apache-2.0, retaining
+      attribution. Econlib is source-inspected, not independently built here.
+      This package uses mathlib alone and derives the payoff and regularity
+      from the sender/receiver utilities before finite optimal attainment.
+automation:
+  methods:
+    - method: "AI-assisted Lean proof development"
+      system: "OpenAI Codex"
+      role: "Economic modeling, Lean proofs, compilation, packaging and exact-source gate verification."
+    - method: "Independent mathematical and exact-source AI reviews"
+      system: "OpenAI Codex, separate reviewer agents"
+      role: "Primary-paper scope and prior-art review; independent examination of compactness, tie breaking, null events, finite attainment and least-majorant proofs."
+    - method: "Lean tactic automation"
+      role: "Finite sums, fin_cases, norm_num, field_simp, fun_prop and ordinary kernel-checked proof automation."
+review:
+  status: >-
+    Separate AI mathematical and primary-source reviews found no scope or
+    mathematical blocker in the economic core. Local and hosted mechanical
+    checks are separately recorded in the verification evidence. No independent
+    human proof review, author endorsement or registry acceptance is asserted.
+  human_review: "No independent human proof review or original-author endorsement is claimed."
+  limitations: >-
+    Finite signals and finite posterior splittings only. No arbitrary-measure
+    signal equivalence or compact-state extension. The proved support bound
+    is conservative n+2, not the sharper n+1 bound in Econlib. Sender payoff
+    may be discontinuous at indifference; only bounded USC is derived.
+    Full support is assumed only for realizing splittings as conditional
+    signals; the simplex/concavification results also cover boundary beliefs.
+    The straightforward recommendation branch is omitted. No mathematical
+    novelty or first-formalization claim is made.
+alignment:
+  statements:
+    - lean: "BayesianPersuasion.economic_payoff_regular"
+      description: "Continuous utilities on nonempty compact metric actions yield sender-preferred receiver actions at every belief, an attained sender supremum, a uniform absolute bound and upper semicontinuity."
+    - lean: "BayesianPersuasion.finite_signal_splitting"
+      description: "For a full-support prior and finite normalized weights/posteriors, Bayes plausibility is equivalent to a normalized conditional signal with the exact state/message joint law, recovery at nonzero weights and equal sender payoff."
+    - lean: "BayesianPersuasion.optimal_information_and_concavification"
+      description: "For continuous utilities and a full-support prior, some finite signal with at most card Ω+2 messages attains the convex-hull upper boundary and dominates every finite signal. This boundary is concave on the simplex, majorizes the derived sender payoff, and lies below every concave majorant."
+    - lean: "BayesianPersuasion.persuasion_gain_iff"
+      description: "At a full-support prior under the same continuous primitive assumptions, a finite experiment strictly improves sender payoff if and only if the concavification strictly exceeds sender payoff at the prior."

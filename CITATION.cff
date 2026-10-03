@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this formalization and its mathematical sources."
+title: "Optimal Information and Concavification in Bayesian Persuasion"
+type: software
+license: Apache-2.0
+version: 0.1.0
+repository-code: "https://github.com/Arthur742Ramos/bayesian-persuasion-lean"
+authors:
+  - family-names: Ramos
+    given-names: Arthur Freitas
+  - family-names: Hulak
+    given-names: David Barros
+  - family-names: de Queiroz
+    given-names: Ruy Jose Guerra Barretto

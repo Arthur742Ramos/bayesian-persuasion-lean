@@ -1,0 +1,34 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "definition_names": [
+    "BayesianPersuasion.Belief",
+    "BayesianPersuasion.expected",
+    "BayesianPersuasion.BestReply",
+    "BayesianPersuasion.SenderPreferred",
+    "BayesianPersuasion.senderPayoff",
+    "BayesianPersuasion.Signal",
+    "BayesianPersuasion.noInformationSignal",
+    "BayesianPersuasion.FullSupport",
+    "BayesianPersuasion.BayesPlausible",
+    "BayesianPersuasion.signalMass",
+    "BayesianPersuasion.posteriorVector",
+    "BayesianPersuasion.signalPosterior",
+    "BayesianPersuasion.probabilitySimplex",
+    "BayesianPersuasion.bestReplyPayoffs",
+    "BayesianPersuasion.concavification",
+    "BayesianPersuasion.splitValue",
+    "BayesianPersuasion.signalValue"
+  ],
+  "theorem_names": [
+    "BayesianPersuasion.economic_payoff_regular",
+    "BayesianPersuasion.finite_signal_splitting",
+    "BayesianPersuasion.optimal_information_and_concavification",
+    "BayesianPersuasion.persuasion_gain_iff"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

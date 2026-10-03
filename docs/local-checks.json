@@ -1,0 +1,32 @@
+{
+  "library_build": "pass",
+  "examples": "prosecutor strict gain and compact continuum actions",
+  "comparator": "Your solution is okay!",
+  "kernels": [
+    "Lean default",
+    "NanoDa",
+    "con-ron"
+  ],
+  "local_sandbox": "disabled: official comparator requires Linux bubblewrap",
+  "authored_constants_audited": 121,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "definition_kinds_checked": 17,
+  "challenge_lines": 168,
+  "challenge_bytes": 7474,
+  "source_sha256": {
+    "BayesianPersuasion.lean": "5cd29e0c9cacc356186f9bf2a61665918a9684a6fdb2b541bb19bb6dea64e8b0",
+    "Solution.lean": "9607ef0481dcb0095af02d141705e1bdf63fbb443109e41653d380af911aaee1",
+    "Challenge.lean": "4e293d7f7d83e04195bf5686021b2c6b28909cb0296fcb03480770222025ba1d",
+    "BayesianPersuasion/CompactHull.lean": "506a87f48a85a495edd09df85a88b221025136862aaf54f0ed25b9f23d668f6a",
+    "BayesianPersuasion/Signals.lean": "887dbe321d952e211ca24482f2679bdbb885562f6f703297a427700bdcfcdfd9",
+    "BayesianPersuasion/Theorems.lean": "4fad7565be09c53ba38cbc92ace28c83e54d1250cb1cea7ee97ffbda8579f2ba",
+    "BayesianPersuasion/Primitives.lean": "dc6f52410a206bff1d09a8e065ce8cb9805ef5e6b1fee584338d0c894d933ae6",
+    "BayesianPersuasion/Examples.lean": "9e80a285ad647aa2d5753e5065e0eda725a40c055cf0b4e11d985c6a1be5555f",
+    "BayesianPersuasion/Attainment.lean": "9946e1407d2e511eaf6ce6402aeb32ab61299f30e64aa7f9a936da9928f88e1e",
+    "scripts/Audit.lean": "20a725edf31ed3c01e2a242567b617320a95afdfbe030cdada64bfb97f00573b"
+  }
+}
